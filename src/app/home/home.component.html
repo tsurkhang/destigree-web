@@ -3,9 +3,22 @@
 <textarea matInput [(ngModel)]="userPrompt" placeholder="describe your requirements and interests"></textarea>
 <button (click)="generateDegree()">Search idk</button>
 <div *ngIf="apiResponse">
+<mat-card class="example-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees">
+    <mat-card-header>
+      <mat-card-title>{{degree.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{degree.reason}}</p>
+      <p>Courses required:{{degree.requirements}}</p>
+      <p>Universities to consider:{{degree.universities}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+  
+<!-- <div *ngIf="apiResponse">
         <h3 *ngFor="let degree of apiResponse.degrees">
             {{degree.title}}
         </h3>
-</div> 
+</div>  -->
 
 
