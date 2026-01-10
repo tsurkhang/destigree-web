@@ -4,7 +4,7 @@ export interface Degree{
     requirements:string;
     universities:string;
     careers:string;
-    salary:number;
+    salary:string;
 }
 
 export interface DegreeResponse{
