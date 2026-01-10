@@ -1,3 +1,9 @@
 <h1>Home</h1> 
 
-<textarea placeholder="describe your requirements and interests"></textarea>
+<textarea matInput [(ngModel)]placeholder="describe your requirements and interests"></textarea>
+<button (click)="generateDegree()">Search idk</button>
+<div *ngIf="apiResponse">
+        <h3 *ngFor="let degree of apiResponse.degrees">
+            {{degree.title}}
+        </h3>
+</div>
