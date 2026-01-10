@@ -1,31 +1,33 @@
-<h1>Home</h1> 
+<h1 class="page-title">Home</h1>
+<h2 class="description">Deal your future.</h2>
 
 <div class="search">
-<form>
-    <mat-form-field class="input">
-      <mat-label>Search</mat-label>
-      <input matInput [(ngModel)]="userPrompt" [ngModelOptions]="{standalone: true}" placeholder="describe your requirements and interests">
-    </mat-form-field>
+    <form class="search-form">
+        <mat-form-field class="input">
+            <mat-label>Search</mat-label>
+            <input matInput [(ngModel)]="userPrompt" [ngModelOptions]="{standalone: true}" placeholder="Describe your requirements and interests">
+        </mat-form-field>
     <button class="btn" (click)="generateDegree()">
         <mat-icon>search</mat-icon>
-        Search
     </button>
-</form>
+    </form>
 </div>
 
 <div class="result" *ngIf="apiResponse">
-<mat-card class="example-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees">
-    <mat-card-header>
-      <mat-card-title>{{degree.degree}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{degree.reason}}</p>
-      <p>Courses required: {{degree.requirements}}</p>
-      <p>Universities to consider: {{degree.universities}}</p>
-      <p>Careers you can pursue: {{degree.careers}}</p>
-      <p>Average salary from this degree: {{degree.salary}}</p>
-    </mat-card-content>
-  </mat-card>
+    <div class="card-grid">
+        <mat-card class="example-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees">
+            <mat-card-header>
+                <mat-card-title>{{degree.degree}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{degree.reason}}</p>
+                <p>Courses required: {{degree.requirements}}</p>
+                <p>Universities to consider: {{degree.universities}}</p>
+                <p>Careers you can pursue: {{degree.careers}}</p>
+                <p>Average salary from this degree: {{degree.salary}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>
   
 
