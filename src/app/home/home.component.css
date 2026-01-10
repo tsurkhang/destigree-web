@@ -1,0 +1,10 @@
+.search {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width:800px;
+}
+
+.input{
+  width:800px;
+}

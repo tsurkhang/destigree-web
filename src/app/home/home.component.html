@@ -1,8 +1,19 @@
 <h1>Home</h1> 
 
-<textarea matInput [(ngModel)]="userPrompt" placeholder="describe your requirements and interests"></textarea>
-<button (click)="generateDegree()">Search idk</button>
-<div *ngIf="apiResponse">
+<div class="search">
+<form>
+    <mat-form-field class="input">
+      <mat-label>Search</mat-label>
+      <input matInput [(ngModel)]="userPrompt" placeholder="describe your requirements and interests">
+    </mat-form-field>
+    <button class="btn" (click)="generateDegree()">
+        <mat-icon>search</mat-icon>
+        Search
+    </button>
+</form>
+</div>
+
+<div class="result" *ngIf="apiResponse">
 <mat-card class="example-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees">
     <mat-card-header>
       <mat-card-title>{{degree.title}}</mat-card-title>
@@ -15,7 +26,11 @@
   </mat-card>
 </div>
   
-<!-- <div *ngIf="apiResponse">
+
+<!-- old code that works:
+ <textarea matInput [(ngModel)]="userPrompt" placeholder="describe your requirements and interests"></textarea>
+<button (click)="generateDegree()">Search idk</button>
+<div *ngIf="apiResponse">
         <h3 *ngFor="let degree of apiResponse.degrees">
             {{degree.title}}
         </h3>

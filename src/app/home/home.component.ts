@@ -6,12 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatInputModule, FormsModule,MatFormFieldModule,CommonModule,MatCardModule],
+  imports: [MatInputModule, FormsModule,MatFormFieldModule,CommonModule,MatCardModule,MatIconModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
