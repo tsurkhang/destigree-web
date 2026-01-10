@@ -14,4 +14,14 @@ export class DegreeService {
   getDegreeRecommendations(prompt: string): Observable<DegreeResponse> {
     return this.http.get<DegreeResponse>(this.apiUrl);
   }
+  /* replace with this once you hook up to backend:
+
+private apiUrl = 'http://localhost:8000/api/generate';
+
+  constructor(private http: HttpClient) {}
+
+  getBookRecommendations(prompt: string): Observable<BookResponse> {
+    return this.http.post<BookResponse>(this.apiUrl, { prompt });
+  }
+*/
 }
