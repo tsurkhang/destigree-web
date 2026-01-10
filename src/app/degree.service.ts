@@ -7,7 +7,7 @@ import { DegreeResponse } from './models/degree.interface';
   providedIn: 'root'
 })
 export class DegreeService {
-  private apiUrl = 'http://localhost:8000/example.json';
+  private apiUrl = 'http://localhost:4200/example.json';
 
   constructor(private http: HttpClient) {}
 

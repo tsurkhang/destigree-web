@@ -4,11 +4,12 @@ import { DegreeService } from '../degree.service';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatInputModule, FormsModule,MatFormFieldModule],
+  imports: [MatInputModule, FormsModule,MatFormFieldModule,CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

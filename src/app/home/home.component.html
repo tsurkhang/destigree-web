@@ -1,18 +1,18 @@
 <h1>Home</h1> 
 
-<textarea matInput [(ngModel)]placeholder="describe your requirements and interests"></textarea>
+<textarea matInput [(ngModel)]="userPrompt" placeholder="describe your requirements and interests"></textarea>
 <button (click)="generateDegree()">Search idk</button>
 <div *ngIf="apiResponse">
         <h3 *ngFor="let degree of apiResponse.degrees">
             {{degree.title}}
         </h3>
-</div>
+</div> 
 
-<form class="example-form">
+<!-- <form class="example-form">
   <mat-form-field class="example-full-width">
     <mat-label>Message</mat-label>
     <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
     <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
     <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
   </mat-form-field>
-</form>
+</form> -->
