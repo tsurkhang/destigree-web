@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DegreeResponse } from '../models/degree.interface';
 import { DegreeService } from '../degree.service';
+
 @Component({
   selector: 'app-home',
   standalone: true,
