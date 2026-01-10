@@ -1,7 +1,7 @@
 {
     "degrees":[
         {
-            "title":"Bachelor of Computer Science",
+            "degree":"Bachelor of Computer Science",
             "reason":"ur a pro coder",
             "requirements":"gr 11 compsci, physics, math,etc",
             "universities":"McMaster, Waterloo, UofT",
@@ -10,7 +10,7 @@
 
         },
         {
-            "title":"Bachelor of Arts in Film Studies",
+            "degree":"Bachelor of Arts in Film Studies",
             "reason":"you like creative stuff and watching movies",
             "requirements":"visual arts, commtech, etc",
             "universities":"Sheridan, OCAD, UofT",

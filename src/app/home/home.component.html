@@ -4,7 +4,7 @@
 <form>
     <mat-form-field class="input">
       <mat-label>Search</mat-label>
-      <input matInput [(ngModel)]="userPrompt" placeholder="describe your requirements and interests">
+      <input matInput [(ngModel)]="userPrompt" [ngModelOptions]="{standalone: true}" placeholder="describe your requirements and interests">
     </mat-form-field>
     <button class="btn" (click)="generateDegree()">
         <mat-icon>search</mat-icon>
@@ -16,7 +16,7 @@
 <div class="result" *ngIf="apiResponse">
 <mat-card class="example-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees">
     <mat-card-header>
-      <mat-card-title>{{degree.title}}</mat-card-title>
+      <mat-card-title>{{degree.degree}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p>{{degree.reason}}</p>
@@ -32,7 +32,7 @@
 <button (click)="generateDegree()">Search idk</button>
 <div *ngIf="apiResponse">
         <h3 *ngFor="let degree of apiResponse.degrees">
-            {{degree.title}}
+            {{degree.degree}}
         </h3>
 </div>  -->
 

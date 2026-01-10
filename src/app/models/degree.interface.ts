@@ -1,5 +1,5 @@
 export interface Degree{
-    title:string;
+    degree:string;
     reason:string;
     requirements:string;
     universities:string;
