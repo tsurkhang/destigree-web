@@ -22,3 +22,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-mdc-form-field-subscript-wrapper {
   display: none !important;
 }
+
+html,body{
+    background-color: #5f2a2a;
+}
+
+mat-form-field.input .mat-mdc-form-field-infix {
+    padding-left: 20px;
+  }
+  
+  mat-form-field.input .mdc-text-field {
+    padding-left: 20px;
+  }
+  .top-banner {
+    background-color: #c62828;
+    padding: 16px 0;       /* instead of 80px */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }

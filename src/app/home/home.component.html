@@ -1,3 +1,4 @@
+<div class="top-banner">
 <h1 class="page-title">Home</h1>
 <h2 class="description">Deal your future.</h2>
 
@@ -5,17 +6,24 @@
     <form class="search-form">
         <mat-form-field class="input">
             <mat-label>Search</mat-label>
-            <input matInput [(ngModel)]="userPrompt" [ngModelOptions]="{standalone: true}" placeholder="Describe your requirements and interests">
+            <textarea matInput [(ngModel)]="userPrompt" [ngModelOptions]="{standalone: true}" placeholder="Describe your requirements and interests" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5">
+            </textarea>
         </mat-form-field>
     <button class="btn" (click)="generateDegree()">
         <mat-icon>search</mat-icon>
     </button>
     </form>
 </div>
+</div>
 
+<div *ngIf="loading" class="loading">
+    Loading degree recommendations...
+</div>
+  
 <div class="result" *ngIf="apiResponse">
-    <div class="card-grid">
-        <mat-card class="example-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees">
+    <div class="card-grid"  *ngIf="apiResponse?.degrees?.length ?? 0 > 0 && !loading">
+        <mat-card class="example-card hover-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees;let i = index">
+            <img class="card-back" src="assets/back-card.png" alt="">
             <mat-card-header>
                 <mat-card-title>{{degree.degree}}</mat-card-title>
             </mat-card-header>
@@ -26,6 +34,9 @@
                 <p>Careers you can pursue: {{degree.careers}}</p>
                 <p>Average salary from this degree: {{degree.salary}}</p>
             </mat-card-content>
+            <button mat-raised-button color="primary" (click)="viewDegreeDetails(degree,i)">
+                More Details
+            </button>
         </mat-card>
     </div>
 </div> 

@@ -1,0 +1,46 @@
+
+<mat-card class="detail-card" *ngIf="degree">
+    <div class="card-header">
+        <div class="degree-info">
+            <h1 class="degree-title">{{ degree.degree }}</h1>
+            <div class="metadata">
+                <mat-chip-set>
+                    <mat-chip>stuff</mat-chip>
+                    <mat-chip>stuff</mat-chip>
+                </mat-chip-set>
+            </div>
+        </div>
+    </div>
+    <mat-card-content>
+      <div class="description-section">
+        <h3>Reason</h3>
+        <p class="description">{{ degree.reason }}</p>
+      </div>
+
+      <div class="additional-info">
+        <div class="info-item">
+          <mat-icon>person</mat-icon>
+          <div>
+            <h4>idk</h4>
+            <p>stuff</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <mat-icon>category</mat-icon>
+          <div>
+            <h4>idk</h4>
+            <p>stuff</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <mat-icon>event</mat-icon>
+          <div>
+            <h4>idk</h4>
+            <p>stuff</p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+</mat-card>
