@@ -26,6 +26,7 @@
   align-items: stretch;    
   gap: 12px;              
 }
+
 .result {
   margin-top: 32px;
 }
@@ -44,6 +45,7 @@
   flex-direction: column;
   width:800px;
 }
+
 .card-grid {
   display: grid;                       
   grid-template-columns: repeat(4, 260px); 
