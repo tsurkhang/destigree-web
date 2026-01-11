@@ -2,7 +2,9 @@ export interface Degree{
     degree:string;
     reason:string;
     requirements:string;
-    university:string;
+    university1:string;
+    university2:string;
+    university3:string;
     careers:string;
     salary:string;
 }
