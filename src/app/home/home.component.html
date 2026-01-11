@@ -17,7 +17,8 @@
 </div>
 
 <div *ngIf="loading" class="loading">
-    Loading degree recommendations...
+    <mat-progress-spinner mode="indeterminate" diameter="50">
+    </mat-progress-spinner>
 </div>
   
 <div class="result" *ngIf="apiResponse">

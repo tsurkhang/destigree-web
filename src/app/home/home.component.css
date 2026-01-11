@@ -191,3 +191,10 @@ mat-chip-set{
   display: block;
   transform: scale(1.3);      /* increase this: 1.1 – 1.4 */
   transform-origin: center;}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}

@@ -10,11 +10,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule,MatChipsModule,MatInputModule, FormsModule,MatFormFieldModule,CommonModule,MatCardModule,MatIconModule],
+  imports: [MatProgressSpinnerModule, MatButtonModule,MatChipsModule,MatInputModule, FormsModule,MatFormFieldModule,CommonModule,MatCardModule,MatIconModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
