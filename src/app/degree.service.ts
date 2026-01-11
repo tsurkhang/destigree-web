@@ -14,8 +14,8 @@ private apiUrl = 'http://localhost:8000/api/generate';
   getDegreeRecommendations(prompt: string): Observable<DegreeResponse> {
     return this.http.post<DegreeResponse>(this.apiUrl, { prompt });
   }
-
-/* private apiUrl = 'http://localhost:4200/example.json';
+/* 
+private apiUrl = 'http://localhost:4200/example.json';
 
   constructor(private http: HttpClient) {}
 

@@ -4,7 +4,9 @@
             "degree":"Bachelor of Computer Science",
             "reason":"ur a pro coder",
             "requirements":"gr 11 compsci, physics, math,etc",
-            "universities":"McMaster, Waterloo, UofT",
+            "university1":"McMaster",
+            "university2":"Waterloo",
+            "university3":"UofT",
             "careers":"Solutions architect, web developer, full-stack engineer",
             "salary":"$3049230942"
 
