@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Degree } from '../models/degree.interface';
 import { CommonModule, Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -15,10 +15,10 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class DegreeDetailsComponent implements OnInit{
   degree?: Degree;
-
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -30,7 +30,9 @@ export class DegreeDetailsComponent implements OnInit{
   }
 
   goBack(): void {
-    this.location.back();
+    const degrees = history.state.degrees;
+  this.router.navigate(['/'], { state: { degrees } });
+
   }
 
 }

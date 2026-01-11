@@ -1,3 +1,4 @@
+
 .detail-card {
     width:800px;
     margin: auto;
@@ -5,6 +6,7 @@
 
 .degree-title {
     margin-left: 20px;
+    color: #7F011F;
 }
 
 .metadata {
@@ -21,8 +23,37 @@
   z-index: 1000;
 }
 
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
 .detail-card {
-  width: 800px;
-  max-height: 90vh;
+  width: 500px;
+  height: 650px;
   overflow-y: auto;
+  animation: slideUp 1s ease-out;
+  will-change: transform, opacity;
+}
+
+.back-btn{
+position: absolute;
+  top: 16px;
+  left: 16px;
+  background: white;
+  color: #7F011F;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 6px 12px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100px;
 }

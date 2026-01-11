@@ -1,9 +1,13 @@
+<div class="detail-page">
 <div class="overlay" *ngIf="degree" (click)="goBack()">
-
+    <button mat-icon-button class="back-btn" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        Back
+    </button>
     <mat-card class="detail-card" (click)="$event.stopPropagation()">
-      <div class="card-header">
-        <div class="degree-info">
-          <h1 class="degree-title">{{ degree.degree }}</h1>
+        <div class="card-header">
+            <div class="degree-info">
+                <h1 class="degree-title">{{ degree.degree }}</h1>
   
           <div class="metadata">
             <mat-chip-set>
@@ -23,32 +27,29 @@
   
         <div class="career-path-salary">
           <div class="career-path-salary-description">
-            <mat-icon>person</mat-icon>
             <div>
-              <h4>Career Path & Salary Range</h4>
-              <p>{{degree.careers}} and {{degree.salary}}</p>
+              <h4>Avaliable Career Paths</h4>
+              <p>{{degree.careers}}</p>
             </div>
           </div>
   
           <div class="degree-requirements">
             <div class="course-degree-requirements">
-              <mat-icon>category</mat-icon>
               <div>
-                <h4>Degree Requirements</h4>
-                <p>stuff</p>
+                <h4>Required Courses</h4>
+                <p>{{degree.requirements}}</p>
               </div>
             </div>
           </div>
   
           <div class="info-item">
-            <mat-icon>event</mat-icon>
             <div>
-              <h4>idk</h4>
-              <p>stuff</p>
+              <h4>Average Salary</h4>
+              <p>{{degree.salary}}</p>
             </div>
           </div>
         </div>
       </mat-card-content>
-    </mat-card>
-  
-  </div>
+</mat-card>
+</div>
+</div>

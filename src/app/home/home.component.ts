@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   apiResponse!:DegreeResponse;
   userPrompt:string="";
   loading:boolean=false;
@@ -29,9 +30,17 @@ export class HomeComponent {
     private degreeService:DegreeService,
     private router:Router
   ){}
+  ngOnInit(): void {
+    const state = history.state;
+  if (state.degrees) {
+    this.apiResponse = { degrees: state.degrees };
+    }
+  }
 
   viewDegreeDetails(degree: Degree, index: number): void {
-    this.router.navigate(['/degree', index], { state: { degree } });
+    this.router.navigate(['/degree', index], {
+      state: { degree, degrees: this.apiResponse.degrees }
+    });
   }
 
   generateDegree() {

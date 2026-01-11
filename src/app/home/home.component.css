@@ -4,6 +4,14 @@
   box-sizing: border-box; 
 }
 
+.description-of-description {
+  text-align: center;
+  font-family: 'Roboto', serif;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 .search {
   display: flex;
   justify-content: center;
