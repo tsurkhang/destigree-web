@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; padding:0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 .mdc-line-ripple {
@@ -24,7 +24,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 html,body{
-    background-color: #5f2a2a;
+    background-color: #F5EBD0;
 }
 
 mat-form-field.input .mat-mdc-form-field-infix {
@@ -35,7 +35,7 @@ mat-form-field.input .mat-mdc-form-field-infix {
     padding-left: 20px;
   }
   .top-banner {
-    background-color: #c62828;
+    background-color: #610320;
     padding: 16px 0;       /* instead of 80px */
     position: sticky;
     top: 0;

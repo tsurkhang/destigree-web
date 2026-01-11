@@ -1,5 +1,4 @@
 <div class="top-banner">
-<h1 class="page-title">Home</h1>
 <h2 class="description">Deal your future.</h2>
 
 <div class="search">
@@ -14,6 +13,7 @@
     </button>
     </form>
 </div>
+<img src="assets/cards.png" alt="Cards" class="banner-image">
 </div>
 
 <div *ngIf="loading" class="loading">
@@ -22,22 +22,30 @@
   
 <div class="result" *ngIf="apiResponse">
     <div class="card-grid"  *ngIf="apiResponse?.degrees?.length ?? 0 > 0 && !loading">
-        <mat-card class="example-card hover-card" appearance="outlined"  *ngFor="let degree of apiResponse.degrees;let i = index">
-            <img class="card-back" src="assets/back-card.png" alt="">
+        <mat-card class="example-card flip-card" *ngFor="let degree of apiResponse.degrees;let i = index">
+            <div class="card-inner">
+                <div class="card-face card-front">
+                    <img class="front-img" src="assets/back-card.png" alt="">
+                </div>
+                <div class="card-face card-back">
             <mat-card-header>
-                <mat-card-title>{{degree.degree}}</mat-card-title>
+                <mat-card-title class="degree-title">{{degree.degree}}</mat-card-title>
             </mat-card-header>
+            <mat-chip-set>
+                <mat-chip class="salary-chip" [ngStyle]="{'background-color': '#e8e8e8','color':'#1976d2'}">
+                    Salary: {{degree.salary}}
+                </mat-chip>
+            </mat-chip-set>
             <mat-card-content>
-                <p>{{degree.reason}}</p>
-                <p>Courses required: {{degree.requirements}}</p>
-                <p>Universities to consider: {{degree.universities}}</p>
-                <p>Careers you can pursue: {{degree.careers}}</p>
-                <p>Average salary from this degree: {{degree.salary}}</p>
+                <p class="degree-reason">
+                    {{degree.reason}}
+                </p>
             </mat-card-content>
-            <button mat-raised-button color="primary" (click)="viewDegreeDetails(degree,i)">
+            <div class="detail-btn-wrapper">
+                <button class="detail-btn" mat-flat-button [ngStyle]="{'background-color':'#E35252','color':'white'}" (click)="viewDegreeDetails(degree,i)">
                 More Details
-            </button>
-        </mat-card>
+                </button>
+            </div>
     </div>
 </div> 
   

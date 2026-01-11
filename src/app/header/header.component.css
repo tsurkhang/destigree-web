@@ -1,0 +1,17 @@
+.page-title {
+    margin: 0;
+      font-family: 'Roboto', serif;
+      color: #F5EBD0;
+      font-weight: 400;
+      font-size: 25px;
+    background-color: #70071f;
+    display: flex; /* if you want to align items inside */
+  align-items: center; /* vertically center content */
+  justify-content: space-between; /* space out elements if needed */
+  width: 100%; /* full width */
+  height: 70px; /* adjust as needed */
+  background-color: #6f0820; /* example header color */
+  padding: 0 20px; /* horizontal padding */
+  box-sizing: border-box; /* ensures padding doesn’t increase width */
+
+  }

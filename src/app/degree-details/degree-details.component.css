@@ -1,0 +1,28 @@
+.detail-card {
+    width:800px;
+    margin: auto;
+}
+
+.degree-title {
+    margin-left: 20px;
+}
+
+.metadata {
+    margin-left: 20px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* optional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.detail-card {
+  width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}

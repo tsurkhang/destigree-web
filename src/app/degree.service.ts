@@ -7,14 +7,15 @@ import { DegreeResponse } from './models/degree.interface';
   providedIn: 'root'
 })
 export class DegreeService {
-  private apiUrl = 'http://localhost:8000/api/generate';
+private apiUrl = 'http://localhost:8000/api/generate';
 
   constructor(private http: HttpClient) {}
 
   getDegreeRecommendations(prompt: string): Observable<DegreeResponse> {
     return this.http.post<DegreeResponse>(this.apiUrl, { prompt });
   }
-  /*  private apiUrl = 'http://localhost:4200/example.json';
+
+/* private apiUrl = 'http://localhost:4200/example.json';
 
   constructor(private http: HttpClient) {}
 

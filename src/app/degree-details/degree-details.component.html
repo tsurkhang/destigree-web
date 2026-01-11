@@ -1,46 +1,54 @@
+<div class="overlay" *ngIf="degree" (click)="goBack()">
 
-<mat-card class="detail-card" *ngIf="degree">
-    <div class="card-header">
+    <mat-card class="detail-card" (click)="$event.stopPropagation()">
+      <div class="card-header">
         <div class="degree-info">
-            <h1 class="degree-title">{{ degree.degree }}</h1>
-            <div class="metadata">
-                <mat-chip-set>
-                    <mat-chip>stuff</mat-chip>
-                    <mat-chip>stuff</mat-chip>
-                </mat-chip-set>
+          <h1 class="degree-title">{{ degree.degree }}</h1>
+  
+          <div class="metadata">
+            <mat-chip-set>
+              <mat-chip>School1</mat-chip>
+              <mat-chip>School2</mat-chip>
+              <mat-chip>School3</mat-chip>
+            </mat-chip-set>
+          </div>
+        </div>
+      </div>
+  
+      <mat-card-content>
+        <div class="description-section">
+          <h3>Reason</h3>
+          <p class="description">{{ degree.reason}}</p>
+        </div>
+  
+        <div class="career-path-salary">
+          <div class="career-path-salary-description">
+            <mat-icon>person</mat-icon>
+            <div>
+              <h4>Career Path & Salary Range</h4>
+              <p>{{degree.careers}} and {{degree.salary}}</p>
             </div>
-        </div>
-    </div>
-    <mat-card-content>
-      <div class="description-section">
-        <h3>Reason</h3>
-        <p class="description">{{ degree.reason }}</p>
-      </div>
-
-      <div class="additional-info">
-        <div class="info-item">
-          <mat-icon>person</mat-icon>
-          <div>
-            <h4>idk</h4>
-            <p>stuff</p>
+          </div>
+  
+          <div class="degree-requirements">
+            <div class="course-degree-requirements">
+              <mat-icon>category</mat-icon>
+              <div>
+                <h4>Degree Requirements</h4>
+                <p>stuff</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="info-item">
+            <mat-icon>event</mat-icon>
+            <div>
+              <h4>idk</h4>
+              <p>stuff</p>
+            </div>
           </div>
         </div>
-        
-        <div class="info-item">
-          <mat-icon>category</mat-icon>
-          <div>
-            <h4>idk</h4>
-            <p>stuff</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <mat-icon>event</mat-icon>
-          <div>
-            <h4>idk</h4>
-            <p>stuff</p>
-          </div>
-        </div>
-      </div>
-    </mat-card-content>
-</mat-card>
+      </mat-card-content>
+    </mat-card>
+  
+  </div>
